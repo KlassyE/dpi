@@ -4,4 +4,3 @@ deployment:
     - export DEPLOYPATH=/home/tecnyqbq/divinepurposeinvestments.ug/
     - /bin/mkdir -p $DEPLOYPATH
     - /bin/cp -R dist/. $DEPLOYPATH
-    - /bin/cp public/.htaccess $DEPLOYPATH 2>/dev/null || true
