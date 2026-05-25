@@ -32,18 +32,6 @@ function Schools() {
         </div>
       </section>
 
-      <section className="section section--light">
-        <div className="section__inner school-detail-grid">
-          {schools.map((schoolItem) => (
-            <article className="school-detail" key={schoolItem.title}>
-              <p>{schoolItem.years}</p>
-              <h2>{schoolItem.title}</h2>
-              <span>{schoolItem.detail}</span>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section className="section">
         <div className="section__inner">
           <SectionIntro eyebrow="Admissions" title="Talk with the school before placement">
