@@ -1,0 +1,934 @@
+:root {
+  --navy: #273a86;
+  --deep-navy: #071d3f;
+  --ink: #162033;
+  --muted: #5c6678;
+  --red: #df1f2d;
+  --gold: #f1bf2f;
+  --teal: #1fbfb5;
+  --sky: #35a9d6;
+  --paper: #ffffff;
+  --soft: #f5f7fb;
+  --line: #dce2ef;
+  --shadow: 0 18px 50px rgba(10, 22, 50, 0.14);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+}
+
+body,
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.app {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.page-main {
+  min-height: 62vh;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 76px;
+  padding: 12px 6vw;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid rgba(39, 58, 134, 0.12);
+  backdrop-filter: blur(18px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.brand img {
+  width: 154px;
+  height: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  color: var(--ink);
+  font-size: 0.96rem;
+  font-weight: 700;
+}
+
+.nav-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible,
+.nav-links a.active {
+  color: var(--navy);
+  background: rgba(39, 58, 134, 0.08);
+  outline: none;
+}
+
+.nav-call {
+  margin-left: 8px;
+  color: var(--paper) !important;
+  background: var(--navy);
+}
+
+.nav-call:hover,
+.nav-call:focus-visible {
+  background: var(--deep-navy) !important;
+}
+
+.menu-button {
+  display: none;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.hero {
+  position: relative;
+  min-height: 78svh;
+  display: grid;
+  align-items: center;
+  padding: 96px 6vw;
+  color: var(--paper);
+  background-image: url('/assets/divine-schools-objectives.webp');
+  background-position: center;
+  background-size: cover;
+  isolation: isolate;
+}
+
+.hero::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: '';
+  background: rgba(5, 18, 43, 0.7);
+}
+
+.hero__content {
+  width: min(760px, 100%);
+}
+
+.hero__eyebrow,
+.section-intro > p,
+.mission-panel__label,
+.school-card > p {
+  margin: 0 0 12px;
+  color: var(--gold);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 760px;
+  margin: 0;
+  font-size: 4.6rem;
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.hero__lead {
+  margin: 18px 0 0;
+  font-size: 1.55rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.hero__body {
+  max-width: 680px;
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.1rem;
+}
+
+.hero__actions,
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.page-hero {
+  position: relative;
+  min-height: 44svh;
+  display: grid;
+  align-items: end;
+  padding: 112px 6vw 76px;
+  color: var(--paper);
+  background-image: linear-gradient(90deg, rgba(5, 18, 43, 0.84), rgba(5, 18, 43, 0.56)), var(--page-hero-image);
+  background-position: center;
+  background-size: cover;
+}
+
+.page-hero__content {
+  width: min(820px, 100%);
+}
+
+.page-hero__eyebrow {
+  margin: 0 0 12px;
+  color: var(--gold);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.page-hero h1 {
+  margin: 0;
+  font-size: 3.7rem;
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+.page-hero__body {
+  max-width: 720px;
+  margin-top: 18px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.1rem;
+}
+
+.page-hero__body p {
+  margin: 0;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 18px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-weight: 900;
+}
+
+.button--primary {
+  color: var(--paper);
+  background: var(--red);
+}
+
+.button--primary:hover,
+.button--primary:focus-visible {
+  background: #c51624;
+  outline: none;
+}
+
+.button--secondary {
+  color: var(--deep-navy);
+  background: var(--gold);
+}
+
+.button--secondary:hover,
+.button--secondary:focus-visible {
+  background: #ffd04b;
+  outline: none;
+}
+
+.button--outline {
+  color: var(--navy);
+  background: var(--paper);
+  border-color: var(--line);
+}
+
+.button--outline:hover,
+.button--outline:focus-visible {
+  color: var(--paper);
+  background: var(--navy);
+  outline: none;
+}
+
+.quick-facts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.quick-fact {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 92px;
+  padding: 22px 28px;
+  color: var(--deep-navy);
+  font-weight: 900;
+  border-right: 1px solid var(--line);
+}
+
+.quick-fact:last-child {
+  border-right: 0;
+}
+
+.quick-fact svg {
+  flex: 0 0 auto;
+  color: var(--red);
+}
+
+.section {
+  padding: 92px 6vw;
+  background: var(--paper);
+}
+
+.section--light {
+  background: var(--soft);
+}
+
+.section--navy {
+  color: var(--paper);
+  background: var(--deep-navy);
+}
+
+.section__inner {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.86fr);
+  gap: 54px;
+}
+
+.two-column--center {
+  align-items: center;
+}
+
+.section-intro {
+  max-width: 760px;
+}
+
+.section-intro h2 {
+  margin: 0;
+  color: var(--deep-navy);
+  font-size: 2.7rem;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.section--navy .section-intro h2,
+.section--navy .section-intro__copy {
+  color: var(--paper);
+}
+
+.section-intro__copy {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.section-intro__copy p {
+  margin: 0;
+}
+
+blockquote {
+  margin: 34px 0 0;
+  padding: 0 0 0 24px;
+  color: var(--deep-navy);
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.38;
+  border-left: 5px solid var(--red);
+}
+
+.mission-panel {
+  padding: 34px;
+  color: var(--paper);
+  background: var(--navy);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.mission-panel h3 {
+  margin: 0 0 28px;
+  font-size: 2rem;
+  line-height: 1.18;
+  letter-spacing: 0;
+}
+
+.mission-panel p:last-child {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.school-grid,
+.pillar-grid,
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 40px;
+}
+
+.school-card,
+.pillar-card,
+.download-card {
+  min-height: 100%;
+  padding: 28px;
+  border-radius: 8px;
+}
+
+.school-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 34px rgba(17, 35, 74, 0.08);
+}
+
+.school-card svg {
+  color: var(--red);
+}
+
+.school-card h3,
+.pillar-card h3,
+.download-card h3 {
+  margin: 14px 0 10px;
+  color: var(--deep-navy);
+  font-size: 1.25rem;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.school-card span,
+.pillar-card p,
+.download-card p {
+  color: var(--muted);
+}
+
+.pillar-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.pillar-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.pillar-card svg {
+  color: var(--gold);
+}
+
+.pillar-card h3,
+.pillar-card p {
+  color: var(--paper);
+}
+
+.pillar-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.reason-list {
+  display: grid;
+  gap: 12px;
+}
+
+.reason-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 18px;
+  color: var(--deep-navy);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-weight: 750;
+}
+
+.reason-item svg,
+.text-link svg,
+.admission-details svg {
+  flex: 0 0 auto;
+  color: var(--teal);
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+  color: var(--navy);
+  font-weight: 900;
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+  color: var(--red);
+  outline: none;
+}
+
+.admissions {
+  background: var(--paper);
+}
+
+.admission-details {
+  display: grid;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.admission-details div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--deep-navy);
+  font-weight: 850;
+}
+
+.admissions__image {
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.admissions__image img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 38px;
+}
+
+.activity-pill {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 70px;
+  padding: 16px 18px;
+  color: var(--deep-navy);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-weight: 900;
+}
+
+.activity-pill svg {
+  flex: 0 0 auto;
+  color: var(--red);
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 36px;
+}
+
+.media-card {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  background: var(--deep-navy);
+  border-radius: 8px;
+}
+
+.media-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 180ms ease;
+}
+
+.media-card:hover img {
+  transform: scale(1.03);
+}
+
+.media-card figcaption {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 14px;
+  color: var(--paper);
+  font-size: 0.92rem;
+  font-weight: 900;
+  background: rgba(7, 29, 63, 0.84);
+}
+
+.downloads {
+  background: var(--paper);
+}
+
+.download-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.download-card {
+  display: flex;
+  flex-direction: column;
+  color: var(--ink);
+  background: var(--soft);
+  border: 1px solid var(--line);
+}
+
+.download-card > svg {
+  color: var(--navy);
+}
+
+.download-card p {
+  margin: 0 0 22px;
+}
+
+.download-card span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  color: var(--red);
+  font-weight: 900;
+}
+
+.download-card:hover,
+.download-card:focus-visible {
+  border-color: var(--navy);
+  box-shadow: 0 16px 40px rgba(17, 35, 74, 0.12);
+  outline: none;
+}
+
+.school-detail-grid,
+.highlight-grid,
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.school-detail,
+.highlight-card,
+.contact-card {
+  padding: 28px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 12px 34px rgba(17, 35, 74, 0.08);
+}
+
+.school-detail > p,
+.contact-card span {
+  margin: 0 0 12px;
+  color: var(--red);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.school-detail h2,
+.highlight-card h3,
+.contact-card strong {
+  display: block;
+  margin: 0 0 12px;
+  color: var(--deep-navy);
+  font-size: 1.28rem;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.school-detail span,
+.highlight-card p {
+  color: var(--muted);
+}
+
+.highlight-card p {
+  margin: 0;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  color: var(--ink);
+}
+
+.contact-card svg {
+  color: var(--navy);
+}
+
+.contact-card--wide {
+  grid-column: span 2;
+}
+
+.media-grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.footer {
+  padding: 56px 6vw;
+  color: var(--paper);
+  background: var(--deep-navy);
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+  gap: 42px;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.footer img {
+  width: 160px;
+  height: auto;
+  padding: 8px;
+  background: var(--paper);
+  border-radius: 8px;
+}
+
+.footer p {
+  max-width: 560px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+address {
+  display: grid;
+  gap: 12px;
+  font-style: normal;
+}
+
+address strong {
+  margin-bottom: 2px;
+  color: var(--gold);
+}
+
+address a,
+address span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+address svg {
+  flex: 0 0 auto;
+  color: var(--gold);
+}
+
+@media (max-width: 1080px) {
+  .quick-facts,
+  .school-grid,
+  .download-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pillar-grid,
+  .media-grid,
+  .school-detail-grid,
+  .highlight-grid,
+  .contact-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .activity-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1040px) {
+  .site-header {
+    min-height: 68px;
+    padding: 10px 20px;
+  }
+
+  .brand img {
+    width: 128px;
+  }
+
+  .menu-button {
+    display: inline-flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 68px;
+    right: 20px;
+    left: 20px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
+
+  .nav-links--open {
+    display: flex;
+  }
+
+  .nav-call {
+    margin-left: 0;
+  }
+
+  .hero {
+    min-height: 74svh;
+    padding: 70px 20px;
+    background-position: 36% center;
+  }
+
+  .page-hero {
+    min-height: 38svh;
+    padding: 86px 20px 58px;
+  }
+
+  .page-hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero h1 {
+    font-size: 3.3rem;
+  }
+
+  .hero__lead {
+    font-size: 1.32rem;
+  }
+
+  .hero__body {
+    font-size: 1rem;
+  }
+
+  .quick-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-fact {
+    min-height: 72px;
+    padding: 18px 20px;
+    border-right: 0;
+  }
+
+  .section {
+    padding: 70px 20px;
+  }
+
+  .two-column,
+  .footer__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .section-intro h2 {
+    font-size: 2.18rem;
+  }
+
+  .mission-panel {
+    padding: 26px;
+  }
+
+  .mission-panel h3 {
+    font-size: 1.55rem;
+  }
+
+  .pillar-grid,
+  .media-grid,
+  .school-detail-grid,
+  .highlight-grid,
+  .contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-card--wide {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero h1 {
+    font-size: 2.72rem;
+  }
+
+  .page-hero h1 {
+    font-size: 2.28rem;
+  }
+
+  .hero__actions,
+  .button-row {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .school-grid,
+  .pillar-grid,
+  .activity-grid,
+  .media-grid,
+  .download-grid,
+  .school-detail-grid,
+  .highlight-grid,
+  .contact-grid,
+  .media-grid--three {
+    grid-template-columns: 1fr;
+  }
+
+  .school-card,
+  .pillar-card,
+  .download-card,
+  .school-detail,
+  .highlight-card,
+  .contact-card {
+    padding: 24px;
+  }
+
+  .media-card img {
+    aspect-ratio: 16 / 11;
+  }
+}
