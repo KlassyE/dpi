@@ -6,7 +6,7 @@ import { downloads } from '../data/siteContent.js';
 function Documents() {
   return (
     <>
-      <PageHero eyebrow="Documents" title="School information for families" image="/assets/divine-kids-registration-brochure.webp">
+      <PageHero eyebrow="Documents" title="School information for families" image="/assets/library-reading.webp">
         <p>Download the core DPI materials used to prepare admissions information, school overview, nursery guidance, and community updates.</p>
       </PageHero>
 

@@ -7,7 +7,7 @@ import { mediaItems, schools } from '../data/siteContent.js';
 function Schools() {
   return (
     <>
-      <PageHero eyebrow="Our Schools" title="Three learning pathways, one DPI standard" image="/assets/shekinah-admissions-overview.webp">
+      <PageHero eyebrow="Our Schools" title="Three learning pathways, one DPI standard" image="/assets/staircase-school-life.webp">
         <p>DPI Schools supports children from early childhood into primary and international study with continuity of biblical values, professional care, and purposeful formation.</p>
       </PageHero>
 
@@ -21,10 +21,13 @@ function Schools() {
               const Icon = schoolItem.icon;
               return (
                 <article className="school-card" key={schoolItem.title}>
-                  <Icon size={30} />
-                  <p>{schoolItem.years}</p>
-                  <h3>{schoolItem.title}</h3>
-                  <span>{schoolItem.text}</span>
+                  <img className="school-card__image" src={schoolItem.image} alt={schoolItem.imageAlt} loading="lazy" />
+                  <div className="school-card__body">
+                    <Icon size={30} />
+                    <p>{schoolItem.years}</p>
+                    <h3>{schoolItem.title}</h3>
+                    <span>{schoolItem.text}</span>
+                  </div>
                 </article>
               );
             })}

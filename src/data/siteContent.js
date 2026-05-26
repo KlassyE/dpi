@@ -48,6 +48,8 @@ export const schools = [
     years: 'Founded 2007',
     text: 'A warm early-years foundation where children learn through guided play, biblical values, language development, and structured discovery.',
     detail: 'The nursery programme builds confidence, communication, number sense, social awareness, and spiritual formation through age-appropriate routines and teacher-guided activity.',
+    image: '/assets/nursery-friendship.webp',
+    imageAlt: 'Nursery learners smiling together on the DPI campus',
     icon: School,
   },
   {
@@ -55,6 +57,8 @@ export const schools = [
     years: 'Primary P.1 - P.7',
     text: 'A primary pathway shaped by professional learning, strong pastoral care, and the formation of responsible young leaders.',
     detail: 'The primary section combines academic discipline, strong moral grounding, practical clubs, and family partnership for learners preparing for the next stage of education.',
+    image: '/assets/primary-reading-partners.webp',
+    imageAlt: 'Primary learners reading together in uniform',
     icon: BookOpen,
   },
   {
@@ -62,6 +66,8 @@ export const schools = [
     years: 'K-12 international section',
     text: 'An international learning environment using the Accelerated Christian Education curriculum with individualized mastery-based progress.',
     detail: 'Shekinah supports mastery learning, personal goal-setting, scripture-based character development, and internationally minded preparation through the ACE model.',
+    image: '/assets/senior-students-walkway.webp',
+    imageAlt: 'Senior students walking together on campus',
     icon: GraduationCap,
   },
 ];
@@ -109,28 +115,129 @@ export const activities = [
   { label: 'Bible Devotions', icon: ShieldCheck },
 ];
 
-export const mediaItems = [
+export const schoolLifeGallery = [
   {
-    src: '/assets/divine-schools-objectives.webp',
-    alt: 'DPI pupils participating in outdoor learning and school life',
-    label: 'Learning Objectives',
+    src: '/assets/dpi-campus-community.webp',
+    alt: 'DPI students, staff, and families gathered on campus',
+    label: 'School Community',
   },
   {
-    src: '/assets/shekinah-admissions-overview.webp',
-    alt: 'Shekinah Christian International School admissions overview',
-    label: 'Shekinah Admissions',
+    src: '/assets/nursery-friendship.webp',
+    alt: 'Nursery learners smiling together on campus',
+    label: 'Nursery Friendships',
   },
   {
-    src: '/assets/shekinah-foundation-activities.webp',
-    alt: 'Shekinah activities and strong foundation brochure page',
-    label: 'Activities and Foundation',
+    src: '/assets/primary-reading-partners.webp',
+    alt: 'Primary learners reading together',
+    label: 'Primary Reading',
   },
   {
-    src: '/assets/divine-schools-admissions-2026.webp',
-    alt: 'Divine Schools admissions 2026 announcement',
-    label: 'Admissions 2026',
+    src: '/assets/outdoor-group-learning.webp',
+    alt: 'Learners working together outdoors on the grass',
+    label: 'Outdoor Learning',
+  },
+  {
+    src: '/assets/lawn-study-circle.webp',
+    alt: 'Students gathered in a study circle on the lawn',
+    label: 'Study Circle',
+  },
+  {
+    src: '/assets/senior-students-walkway.webp',
+    alt: 'Senior students walking together on campus',
+    label: 'Senior School Life',
+  },
+  {
+    src: '/assets/student-leaders-conversation.webp',
+    alt: 'Student leaders in conversation outside class',
+    label: 'Student Leadership',
+  },
+  {
+    src: '/assets/student-mentor-conversation.webp',
+    alt: 'Students speaking together beside the staircase',
+    label: 'Mentorship',
+  },
+  {
+    src: '/assets/staircase-school-life.webp',
+    alt: 'Learners gathered on the school staircase',
+    label: 'Campus Movement',
+  },
+  {
+    src: '/assets/library-reading.webp',
+    alt: 'A learner choosing a book from the library shelves',
+    label: 'Library Time',
+  },
+  {
+    src: '/assets/collaborative-classroom.webp',
+    alt: 'Students collaborating around a classroom table',
+    label: 'Collaborative Learning',
+  },
+  {
+    src: '/assets/senior-classroom-table.webp',
+    alt: 'Senior students seated together around a classroom table',
+    label: 'Classroom Teams',
+  },
+  {
+    src: '/assets/classroom-reading.webp',
+    alt: 'Students reading together in class',
+    label: 'Classroom Reading',
+  },
+  {
+    src: '/assets/shared-reading.webp',
+    alt: 'Students sharing a reading activity at a desk',
+    label: 'Shared Reading',
+  },
+  {
+    src: '/assets/joyful-reading-group.webp',
+    alt: 'A group of learners smiling while reading together',
+    label: 'Joyful Reading',
+  },
+  {
+    src: '/assets/music-guitar.webp',
+    alt: 'A learner practicing guitar during music activities',
+    label: 'Guitar Practice',
+  },
+  {
+    src: '/assets/music-keyboard.webp',
+    alt: 'A learner practicing keyboard during music activities',
+    label: 'Keyboard Practice',
+  },
+  {
+    src: '/assets/music-drums.webp',
+    alt: 'Learners participating in drum practice',
+    label: 'Drum Practice',
+  },
+  {
+    src: '/assets/violin-performance.webp',
+    alt: 'A learner playing violin',
+    label: 'Violin Performance',
+  },
+  {
+    src: '/assets/creative-arts-table.webp',
+    alt: 'Learners creating handmade items at an activity table',
+    label: 'Creative Arts',
+  },
+  {
+    src: '/assets/creative-arts-mentorship.webp',
+    alt: 'A teacher guiding learners during creative arts',
+    label: 'Creative Mentorship',
+  },
+  {
+    src: '/assets/science-demonstration.webp',
+    alt: 'A science demonstration with learners observing closely',
+    label: 'Science Discovery',
+  },
+  {
+    src: '/assets/practical-skills.webp',
+    alt: 'A learner practicing practical hand skills outdoors',
+    label: 'Practical Skills',
   },
 ];
+
+export const mediaItems = schoolLifeGallery.slice(0, 8);
+
+export const homeMoments = [schoolLifeGallery[0], schoolLifeGallery[3], schoolLifeGallery[10], schoolLifeGallery[18]];
+
+export const academicMoments = [schoolLifeGallery[12], schoolLifeGallery[13], schoolLifeGallery[14]];
 
 export const downloads = [
   {

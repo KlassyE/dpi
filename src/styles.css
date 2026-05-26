@@ -141,7 +141,7 @@ img {
   align-items: center;
   padding: 96px 6vw;
   color: var(--paper);
-  background-image: url('/assets/divine-schools-objectives.webp');
+  background-image: url('/assets/dpi-campus-community.webp');
   background-position: center;
   background-size: cover;
   isolation: isolate;
@@ -162,7 +162,7 @@ img {
 .hero__eyebrow,
 .section-intro > p,
 .mission-panel__label,
-.school-card > p {
+.school-card__body > p {
   margin: 0 0 12px;
   color: var(--gold);
   font-size: 0.82rem;
@@ -422,9 +422,26 @@ blockquote {
 }
 
 .school-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
   background: var(--paper);
   border: 1px solid var(--line);
   box-shadow: 0 12px 34px rgba(17, 35, 74, 0.08);
+}
+
+.school-card__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.school-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 26px;
 }
 
 .school-card svg {
@@ -919,12 +936,15 @@ address svg {
     grid-template-columns: 1fr;
   }
 
-  .school-card,
   .pillar-card,
   .download-card,
   .school-detail,
   .highlight-card,
   .contact-card {
+    padding: 24px;
+  }
+
+  .school-card__body {
     padding: 24px;
   }
 

@@ -1,11 +1,11 @@
 import PageHero from '../components/PageHero.jsx';
 import SectionIntro from '../components/SectionIntro.jsx';
-import { activities, mediaItems } from '../data/siteContent.js';
+import { activities, schoolLifeGallery } from '../data/siteContent.js';
 
 function LifeAtDpi() {
   return (
     <>
-      <PageHero eyebrow="Life at DPI" title="Learning that grows the whole child" image="/assets/shekinah-foundation-activities.webp">
+      <PageHero eyebrow="Life at DPI" title="Learning that grows the whole child" image="/assets/music-drums.webp">
         <p>Students are encouraged to discover gifts, strengthen confidence, build friendships, serve responsibly, and enjoy a balanced school experience.</p>
       </PageHero>
 
@@ -30,11 +30,11 @@ function LifeAtDpi() {
 
       <section className="section">
         <div className="section__inner">
-          <SectionIntro eyebrow="Highlights" title="School materials and moments">
-            <p>The current visual materials show admissions, learning objectives, activities, and the foundation DPI wants to build in every learner.</p>
+          <SectionIntro eyebrow="Highlights" title="School life in motion">
+            <p>These moments show classroom learning, friendship, mentorship, music, practical skills, and the everyday rhythm of DPI campus life.</p>
           </SectionIntro>
           <div className="media-grid" aria-label="DPI Schools media highlights">
-            {mediaItems.map((mediaItem) => (
+            {schoolLifeGallery.map((mediaItem) => (
               <figure className="media-card" key={mediaItem.src}>
                 <img src={mediaItem.src} alt={mediaItem.alt} loading="lazy" />
                 <figcaption>{mediaItem.label}</figcaption>

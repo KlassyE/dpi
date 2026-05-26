@@ -6,7 +6,7 @@ import { admissionSteps, siteContact } from '../data/siteContent.js';
 function Admissions() {
   return (
     <>
-      <PageHero eyebrow="Admissions" title="Admissions are open for 2026" image="/assets/divine-schools-admissions-2026.webp">
+      <PageHero eyebrow="Admissions" title="Admissions are open for 2026" image="/assets/outdoor-group-learning.webp">
         <p>Families are invited to contact the school offices for nursery, primary, and international section enquiries.</p>
       </PageHero>
 
@@ -44,7 +44,7 @@ function Admissions() {
             </div>
           </div>
           <figure className="admissions__image">
-            <img src="/assets/divine-schools-admissions-2026.webp" alt="Divine Schools admission announcement with pupils" />
+            <img src="/assets/student-leaders-conversation.webp" alt="DPI students speaking together outside class" />
           </figure>
         </div>
       </section>

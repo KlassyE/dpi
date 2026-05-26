@@ -1,4 +1,4 @@
-function PageHero({ eyebrow, title, children, image = '/assets/divine-schools-objectives.webp' }) {
+function PageHero({ eyebrow, title, children, image = '/assets/dpi-campus-community.webp' }) {
   return (
     <section className="page-hero" style={{ '--page-hero-image': `url(${image})` }} aria-labelledby="page-title">
       <div className="page-hero__content">

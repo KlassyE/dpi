@@ -2,7 +2,7 @@ import { ArrowRight, FileText, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import QuickFacts from '../components/QuickFacts.jsx';
 import SectionIntro from '../components/SectionIntro.jsx';
-import { pillars, schools, siteContact } from '../data/siteContent.js';
+import { homeMoments, pillars, schools, siteContact } from '../data/siteContent.js';
 
 function Home() {
   return (
@@ -60,10 +60,13 @@ function Home() {
               const Icon = schoolItem.icon;
               return (
                 <article className="school-card" key={schoolItem.title}>
-                  <Icon size={30} />
-                  <p>{schoolItem.years}</p>
-                  <h3>{schoolItem.title}</h3>
-                  <span>{schoolItem.text}</span>
+                  <img className="school-card__image" src={schoolItem.image} alt={schoolItem.imageAlt} loading="lazy" />
+                  <div className="school-card__body">
+                    <Icon size={30} />
+                    <p>{schoolItem.years}</p>
+                    <h3>{schoolItem.title}</h3>
+                    <span>{schoolItem.text}</span>
+                  </div>
                 </article>
               );
             })}
@@ -97,6 +100,22 @@ function Home() {
         </div>
       </section>
 
+      <section className="section section--light">
+        <div className="section__inner">
+          <SectionIntro eyebrow="Campus Moments" title="A living school community">
+            <p>Across classrooms, outdoor learning, creative activity, and performance, learners are formed in spaces that feel active, safe, and purposeful.</p>
+          </SectionIntro>
+          <div className="media-grid" aria-label="DPI campus moments">
+            {homeMoments.map((mediaItem) => (
+              <figure className="media-card" key={mediaItem.src}>
+                <img src={mediaItem.src} alt={mediaItem.alt} loading="lazy" />
+                <figcaption>{mediaItem.label}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="section admissions-callout">
         <div className="section__inner two-column two-column--center">
           <div>
@@ -115,7 +134,7 @@ function Home() {
             </div>
           </div>
           <figure className="admissions__image">
-            <img src="/assets/divine-schools-admissions-2026.webp" alt="Divine Schools admission announcement with pupils" />
+            <img src="/assets/dpi-campus-community.webp" alt="DPI students, staff, and families gathered on campus" />
           </figure>
         </div>
       </section>

@@ -6,7 +6,7 @@ import { siteContact } from '../data/siteContent.js';
 function Contact() {
   return (
     <>
-      <PageHero eyebrow="Contact" title="Speak with DPI Schools" image="/assets/divine-schools-2025-registration.webp">
+      <PageHero eyebrow="Contact" title="Speak with DPI Schools" image="/assets/dpi-campus-community.webp">
         <p>Contact the admissions office for school visits, registration enquiries, placement guidance, and document requests.</p>
       </PageHero>
 

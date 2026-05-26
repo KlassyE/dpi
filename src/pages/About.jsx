@@ -5,7 +5,7 @@ import { pillars } from '../data/siteContent.js';
 function About() {
   return (
     <>
-      <PageHero eyebrow="About DPI Schools" title="A school family with a clear mandate">
+      <PageHero eyebrow="About DPI Schools" title="A school family with a clear mandate" image="/assets/dpi-campus-community.webp">
         <p>Divine Purpose Investments Schools exists to raise Christ-like, servant leaders who can transform families, communities, and nations.</p>
       </PageHero>
 

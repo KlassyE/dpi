@@ -1,12 +1,12 @@
 import { FileText, ShieldCheck } from 'lucide-react';
 import PageHero from '../components/PageHero.jsx';
 import SectionIntro from '../components/SectionIntro.jsx';
-import { curriculumHighlights, reasons } from '../data/siteContent.js';
+import { academicMoments, curriculumHighlights, reasons } from '../data/siteContent.js';
 
 function Academics() {
   return (
     <>
-      <PageHero eyebrow="Academics" title="Excellent learning with character at the center">
+      <PageHero eyebrow="Academics" title="Excellent learning with character at the center" image="/assets/classroom-reading.webp">
         <p>The national curriculum is offered alongside the Accelerated Christian Education programme for disciplined, values-led, mastery-focused learning.</p>
       </PageHero>
 
@@ -45,6 +45,14 @@ function Academics() {
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
               </article>
+            ))}
+          </div>
+          <div className="media-grid media-grid--three" aria-label="Academic life at DPI">
+            {academicMoments.map((mediaItem) => (
+              <figure className="media-card" key={mediaItem.src}>
+                <img src={mediaItem.src} alt={mediaItem.alt} loading="lazy" />
+                <figcaption>{mediaItem.label}</figcaption>
+              </figure>
             ))}
           </div>
         </div>
