@@ -1,6 +1,5 @@
-﻿---
+---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/tecnyqbq/divinepurposeinvestments.ug/
-    - /bin/mkdir -p $DEPLOYPATH
-    - /bin/cp -R dist/. $DEPLOYPATH
+    - /bin/test -f dist/index.html
+    - /usr/bin/printf '%s\n' 'DirectoryIndex dist/index.html' '' '<IfModule mod_rewrite.c>' '  RewriteEngine On' '  RewriteRule ^$ dist/index.html [L]' '  RewriteRule ^index\.html$ dist/index.html [L]' '  RewriteRule ^assets/(.*)$ dist/assets/$1 [L]' '  RewriteRule ^documents/(.*)$ dist/documents/$1 [L]' '  RewriteCond %{REQUEST_FILENAME} !-f' '  RewriteCond %{REQUEST_FILENAME} !-d' '  RewriteRule . dist/index.html [L]' '</IfModule>' '' '<IfModule mod_mime.c>' '  AddType image/webp .webp' '</IfModule>' > .htaccess
