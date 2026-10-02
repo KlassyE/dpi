@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/tecnyqbq/repositories/dpi/
+    - export DEPLOYPATH=/home/tecnyqbq/divinepurposeinvestments.ug/
     - /bin/mkdir -p "$DEPLOYPATH"
     - /bin/cp -R dist/. "$DEPLOYPATH"
 
