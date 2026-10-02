@@ -1,7 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/tecnyqbq/repositories/dpi/
-    - /bin/mkdir -p "$DEPLOYPATH"
-    - /bin/cp -R . "$DEPLOYPATH"
-
