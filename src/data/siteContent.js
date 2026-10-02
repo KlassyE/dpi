@@ -21,6 +21,7 @@ export const navigationItems = [
   { label: 'Academics', path: '/academics' },
   { label: 'Admissions', path: '/admissions' },
   { label: 'Life at DPI', path: '/life-at-dpi' },
+  { label: 'Events & Programmes', path: '/events-and-programmes' },
   { label: 'Documents', path: '/documents' },
   { label: 'Contact', path: '/contact' },
 ];
@@ -241,6 +242,11 @@ export const academicMoments = [schoolLifeGallery[12], schoolLifeGallery[13], sc
 
 export const downloads = [
   {
+    title: 'Third Term News & Updates',
+    description: 'Term opening information, adventures, anniversary programmes, and the full flyer pack.',
+    href: '/documents/Third%20Term%20News%20and%20Updates.pdf',
+  },
+  {
     title: 'DPI Schools Overview',
     description: 'Strategic overview, vision, mission, and curriculum direction.',
     href: '/documents/dpi-schools-overview.pptx',
@@ -259,6 +265,44 @@ export const downloads = [
     title: 'Shekinah Newsletter',
     description: 'School updates and community highlights from the 2026 issue.',
     href: '/documents/shekinah-newsletter-2026.pdf',
+  },
+];
+
+export const eventProgrammes = [
+  {
+    title: 'Opening of Term 3, 2026',
+    date: '14 September 2026',
+    tag: 'School news',
+    description: 'Welcome back! Term 3 kicks off on September 14th — get ready for an exciting final term filled with learning, growth, and memorable milestones!',
+    image: null,
+  },
+  {
+    title: 'Applications Open for All Classes',
+    date: 'Open now',
+    tag: 'Admissions',
+    description: 'Join our vibrant school community! Applications are officially open for all classes — secure your child\'s spot today and unlock a bright academic future.',
+    image: null,
+  },
+  {
+    title: 'Twentieth Anniversary Run',
+    date: '21 November 2026',
+    tag: 'Community event',
+    description: 'Lace up your running shoes and celebrate 20 incredible years with us! Join our anniversary run on November 21st. Click here to register and purchase your official runner\'s kit.',
+    image: '/site-assets/event-flyers/event_1.png',
+  },
+  {
+    title: 'Twentieth Anniversary Production',
+    date: '29 November 2026',
+    tag: 'Campus celebration',
+    description: 'Two decades of excellence showcased on one grand stage! Don\'t miss our milestone Anniversary Production on November 29th — check out the flyer for event details!',
+    image: '/site-assets/event-flyers/event_2.png',
+  },
+  {
+    title: 'The Restore Youth Camp',
+    date: '8–12 December 2026',
+    tag: 'Youth programme',
+    description: 'End the year refreshed and inspired! The Restore Youth Camp offers 5 unforgettable days of fun, connection, and empowerment from Dec 8th to 12th. See the flyer for full details!',
+    image: '/site-assets/event-flyers/event_3.png',
   },
 ];
 

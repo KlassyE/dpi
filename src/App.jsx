@@ -6,6 +6,7 @@ import Academics from './pages/Academics.jsx';
 import Admissions from './pages/Admissions.jsx';
 import Contact from './pages/Contact.jsx';
 import Documents from './pages/Documents.jsx';
+import EventsAndProgrammes from './pages/EventsAndProgrammes.jsx';
 import Home from './pages/Home.jsx';
 import LifeAtDpi from './pages/LifeAtDpi.jsx';
 import Schools from './pages/Schools.jsx';
@@ -32,6 +33,7 @@ function AppRoutes() {
           <Route path="academics" element={<Academics />} />
           <Route path="admissions" element={<Admissions />} />
           <Route path="life-at-dpi" element={<LifeAtDpi />} />
+          <Route path="events-and-programmes" element={<EventsAndProgrammes />} />
           <Route path="documents" element={<Documents />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<Navigate to="/" replace />} />
