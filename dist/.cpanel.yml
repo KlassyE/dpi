@@ -1,4 +1,7 @@
----target: /home/tecnyqbq/divinepurposeinvestments.ugdeployment:
+---
+deployment:
   tasks:
-    - /bin/test -f index.html
-    - /usr/bin/printf '%s\n' 'DirectoryIndex index.html' '' '<IfModule mod_rewrite.c>' '  RewriteEngine On' '  RewriteRule ^$ index.html [L]' '  RewriteRule ^index\.html$ index.html [L]' '  RewriteRule ^assets/(.*)$ assets/$1 [L]' '  RewriteRule ^documents/(.*)$ documents/$1 [L]' '  RewriteCond %{REQUEST_FILENAME} !-f' '  RewriteCond %{REQUEST_FILENAME} !-d' '  RewriteRule . index.html [L]' '</IfModule>' '' '<IfModule mod_mime.c>' '  AddType image/webp .webp' '</IfModule>' > .htaccess
+    - export DEPLOYPATH=/home/tecnyqbq/divinepurposeinvestments.ug/
+    - /bin/mkdir -p "$DEPLOYPATH"
+    - /bin/cp -R . "$DEPLOYPATH"
+
