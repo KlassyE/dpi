@@ -119,7 +119,7 @@ function Home() {
       <section className="section admissions-callout">
         <div className="section__inner two-column two-column--center">
           <div>
-            <SectionIntro eyebrow="Admissions" title="Admissions are open for 2026">
+            <SectionIntro eyebrow="Admissions" title="Admissions are open for 2027">
               <p>Families can contact the school offices for nursery, primary, and international section enquiries.</p>
             </SectionIntro>
             <div className="button-row">
