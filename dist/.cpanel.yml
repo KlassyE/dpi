@@ -1,5 +1,4 @@
----
-deployment:
+---target: /home/tecnyqbq/divinepurposeinvestments.ugdeployment:
   tasks:
     - /bin/test -f index.html
-    - /usr/bin/printf '%s\n' 'DirectoryIndex index.html' '' '<IfModule mod_rewrite.c>' '  RewriteEngine On' '  RewriteRule ^$ index.html [L]' '  RewriteRule ^index\.html$ index.html [L]' '  RewriteRule ^assets/(.*)$ assets/$1 [L]' '  RewriteRule ^site-assets/(.*)$ site-assets/$1 [L]' '  RewriteRule ^documents/(.*)$ documents/$1 [L]' '  RewriteCond %{REQUEST_FILENAME} !-f' '  RewriteCond %{REQUEST_FILENAME} !-d' '  RewriteRule . index.html [L]' '</IfModule>' '' '<IfModule mod_mime.c>' '  AddType image/webp .webp' '  AddType application/pdf .pdf' '</IfModule>' > .htaccess
+    - /usr/bin/printf '%s\n' 'DirectoryIndex index.html' '' '<IfModule mod_rewrite.c>' '  RewriteEngine On' '  RewriteRule ^$ index.html [L]' '  RewriteRule ^index\.html$ index.html [L]' '  RewriteRule ^assets/(.*)$ assets/$1 [L]' '  RewriteRule ^documents/(.*)$ documents/$1 [L]' '  RewriteCond %{REQUEST_FILENAME} !-f' '  RewriteCond %{REQUEST_FILENAME} !-d' '  RewriteRule . index.html [L]' '</IfModule>' '' '<IfModule mod_mime.c>' '  AddType image/webp .webp' '</IfModule>' > .htaccess

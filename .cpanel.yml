@@ -1,4 +1,5 @@
 ---
+target: /home/tecnyqbq/divinepurposeinvestments.ug
 deployment:
   tasks:
     - /bin/test -f dist/index.html
